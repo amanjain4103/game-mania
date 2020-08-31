@@ -1,0 +1,19 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#canvas  {
+    background-color: grey;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+   
+    
+}
+
