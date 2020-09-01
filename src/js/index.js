@@ -3,9 +3,12 @@ const dropdownMenu = document.getElementById("dropdown-menu");
 const hamburger = document.getElementById("hamburger");
 const navItems = document.getElementById("nav-items");
 const usernameField = document.getElementById("username");
+const viewOneContainer = document.getElementById("viewOneContainer");
+const viewTwoContainer = document.getElementById("viewTwoContainer");
 
 let isDropdownVisible = false;
 let isHamburgerClicked = false;
+let isCardViewMounted = true;
 
 dropdownTrigger.onclick = function() {
 
@@ -27,6 +30,42 @@ hamburger.onclick = function() {
     }
     isHamburgerClicked = !isHamburgerClicked;
 }
+
+// initially isCardViewMounted = true;
+
+function unmountCardsView() {
+    
+    if(isCardViewMounted) {
+        //unmounting card view
+        viewOneContainer.style.display = "none";
+        viewTwoContainer.style.display = "flex";
+        isCardViewMounted = false;
+    }
+    
+}
+
+function mountCardsView() {
+    
+    //will execute if its unmounted 
+    if(!isCardViewMounted) {
+        //mounting card view
+        viewOneContainer.style.display = "flex";
+        viewTwoContainer.style.display = "none";
+        isCardViewMounted = true;
+    }
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
 
 //solving bug - if we continuously resize window the display of nav elements becomess none forever
 

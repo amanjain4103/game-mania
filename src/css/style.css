@@ -162,16 +162,86 @@ body {
     background-color: #2f3640;
 }
 
+/* cards container div styling ends*/
 
+/* game board styling */
 
+#viewTwoContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+}
 
+#canvas-container {
+    flex-grow: 3;
+    min-height: 81vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#controls-container {
+    flex-grow: 1;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#arrow-key-container {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#rest-container {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow-key-button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    background-color: #2f3640;
+}
+
+.btn-play-again {
+    color: #2f3640;
+    padding: 20px 40px;
+    font-size: 1.2rem;
+    background-color: #FF9800;
+    border: 0px solid black;
+    font-weight: 600;   
+    transition-duration: 0.4s;
+}
+
+.btn-play-again:hover {
+    cursor: pointer;
+    box-shadow: 0 0 15px 1px grey;
+    color: #FF9800;
+    background-color: #2f3640;
+}
+
+.game-view-score {
+    font-size: 1.5rem;
+}
 
 
 
 @media only screen and (max-width: 775px) {
    #username {
        
-       /* display: none; */
        float: left;
        margin:15px 30px;
        display: none;
@@ -234,6 +304,16 @@ body {
 
     /* Nav styling ends */
 
+    /* game view styling starts */
+    #canvas-container {
+        flex-grow: 3;
+        min-height: 10vh;
+        min-width: 10vw;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
 
 }
 
