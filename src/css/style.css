@@ -308,11 +308,7 @@ body {
     #canvas-container {
         flex-grow: 3;
         min-height: 10vh;
-        min-width: 10vw;
         display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
     }
 
 }

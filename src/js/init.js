@@ -6,7 +6,7 @@ canvas.width = 544;
 canvas.height = 544;
     
 if(window.innerWidth <= 600 ) {
-    //17*20
-    canvas.width = 340;
-    canvas.height = 340;
+    //17*16
+    canvas.width = 272;
+    canvas.height = 272;
 }
