@@ -1,19 +1,239 @@
 body {
     padding: 0;
     margin: 0;
+    font-family: 'Roboto Mono', monospace;
+    background:
+    radial-gradient(black 3px, transparent 4px),
+    radial-gradient(black 3px, transparent 4px),
+    linear-gradient(#fff 4px, transparent 0),
+    linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px),
+    linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px),
+    #fff;
+    background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
 }
 
-#canvas  {
-    background-color: grey;
+#viewTwoContainer {
+    display: none;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 57px;
+    background-color: #FF9800;
+    box-shadow: 0px 1px 3px 2px grey;
+    display: flex;
+
 }
 
 
+#nav-items {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    list-style-type: none;
 
+}
 
+#nav-items > li > a {
+    margin: 15px;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+}
 
+#nav-items > li > a:hover {
+    font-weight: 600;
+}
 
-@media only screen and (max-width: 600px) {
-   
+#logo {
+    color: #130f40;
+    flex-shrink: 0;
+    margin: 5px 15px;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+#dropdown-icon {
+    position: relative;
+    top: 3px;
+}
+
+#dropdown-icon:hover {
+    color: black;
+}
+
+#username {
+    border: none;
+    margin: 15px;
+    border-bottom: 1px solid black;
+    padding: 0;
+    background-color: rgba(255, 87, 34,0.1);
+    height: 25px;
+    width: 100px;
+    text-align: center;
+    font-size: 1.2rem;
+
+}
+
+#dropdown-menu {
+    list-style-type: none;
+    position: relative;
+    top: 43px;
+    left: 65px;
+    background-color: #FF9800;
+    padding: 0 ;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-top: 5px;
+    display: none;
+}
+
+#dropdown-menu > li {
+    margin-bottom: 5px;
+    border-bottom: 1px solid grey;
     
+}
+
+#dropdown-menu > li:hover {
+    cursor: pointer;
+}
+
+#dropdown-trigger > a {
+    margin: 0 !important;
+    float: right;
+}
+
+#hamburger { 
+    display: none;
+}
+
+/* Nav styling ends */
+
+
+/* cards container div */
+
+#viewOneContainer {
+    /* background-color: coral; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    min-height: 77vh;
+}
+
+.card {
+    flex-direction: row;
+    background-color: black;
+    height: 300px;
+    width: 230px;
+    margin: 15px;
+    background: url(../assets/snake-game.jpg) no-repeat center center scroll; 
+    background-size: cover;
+    border: 2px dashed grey;
+    transition-duration: 0.4s;
+}
+
+.card:hover {
+    box-shadow: 0 0 25px 2px #FF9800;
+    border: 2px dashed #FF9800;
+    cursor: pointer;
+}
+
+.btn {
+    color: #2f3640;
+    padding: 10px 20px;
+    margin: 15em 4.3em 1em 4.3em;
+    background-color: #FF9800;
+    border: 0px solid black;
+    font-weight: 600;   
+    transition-duration: 0.4s;
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0 15px 1px grey;
+    color: #FF9800;
+    background-color: #2f3640;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 775px) {
+   #username {
+       
+       /* display: none; */
+       float: left;
+       margin:15px 30px;
+       display: none;
+   }
+
+   .navbar {
+       height: fit-content;
+       flex-direction: column;
+   }
+
+   #nav-items {
+       flex-direction: column;
+       margin:0;
+       padding: 0;
+       display: none;
+       
+   }
+
+   #nav-items > li {
+    margin:15px 30px;
+   }
+
+    #hamburger {
+        display: block;
+        padding: 20px 10px 10px 30px;
+        width:30px;
+        height: 30px;
+    }
+    
+    #hamburger:hover {
+        cursor: pointer;
+    }
+
+    #logo {
+        position: absolute;
+        left: 60px;
+    }
+    
+    #dropdown-trigger > a {
+        margin: 0 !important;
+        float: left;
+    }
+
+    #nav-items > li:nth-child(2) > a {
+        margin: 0;
+    }
+
+    #dropdown-menu {
+        list-style-type: none;
+        position: relative;
+        top: 43px;
+        left: -15px;
+        margin-bottom: 30px;
+    }
+    
+    #dropdown-menu > li:nth-child(1) > span {
+        position: relative;
+        left: -68px;
+    }
+
+    /* Nav styling ends */
+
+
 }
 
