@@ -55,6 +55,7 @@ body {
     text-decoration: none;
     font-size: 2rem;
     font-weight: 600;
+    cursor: pointer;
 }
 
 #dropdown-icon {
@@ -167,12 +168,14 @@ body {
 /* game board styling */
 
 #viewTwoContainer {
-    display: flex;
+    display: none;
+    /* display: flex; */
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     margin-top: 70px;
 }
+
 
 #canvas-container {
     flex-grow: 3;

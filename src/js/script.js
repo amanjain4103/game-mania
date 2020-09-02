@@ -1,17 +1,24 @@
+const playAgain = document.getElementById("play-again");
 
 function loadSnakeGame() {
+    
+    const top = document.getElementById("top");
+    const right = document.getElementById("right");
+    const bottom = document.getElementById("bottom");
+    const left = document.getElementById("left");
+
     
     // const canvas = document.getElementById("canvas");
     
     // //making canvas responsive
-    // //17*32
-    // canvas.width = 544;
-    // canvas.height = 544;
+    // //17*30
+    // canvas.width = 510;
+    // canvas.height = 510;
     
     // if(window.innerWidth <= 600 ) {
-    //     //17*20
-    //     canvas.width = 340;
-    //     canvas.height = 340;
+    //     //17*16
+    //     canvas.width = 272;
+    //     canvas.height = 272;
     // }
     
     //setting smallest unit 
@@ -120,7 +127,7 @@ function loadSnakeGame() {
         return false;
     }
     
-    //listening to arrow keys and on screen buttons both
+    //listening to arrow keys
     document.addEventListener("keydown",detectDirection);
     
     let direction = "";
@@ -139,6 +146,20 @@ function loadSnakeGame() {
         }
     }
     
+    //triggered when on screen control buttons are pressed
+    left.onclick = function() {
+        detectDirection({keyCode:37})
+    }
+    top.onclick = function() {
+        detectDirection({keyCode:38})
+    }
+    right.onclick = function() {
+        detectDirection({keyCode:39})
+    }
+    bottom.onclick = function() {
+        detectDirection({keyCode:40})
+    }
+
     paintSnakeBoard();
     
     function draw() {
@@ -169,7 +190,7 @@ function loadSnakeGame() {
         //when snake eats the food
         if(snakeX == food.x && snakeY == food.y) {
             generateRandomFood();
-            
+            incrementScore();
         }else {
             //remove tail if snake don't eat food
             if(direction!=="") snake.pop();
@@ -207,18 +228,40 @@ function loadSnakeGame() {
     }
     
     let interval=0;
+    // let pos=0;
+
     function startGame() {
-        
         interval = window.setInterval(draw,100);
+        // console.log(interval[pos]);
     }
     function stopGame() {
-        interval = window.clearInterval(interval);
+        window.clearInterval(interval);
     }
     
     startGame();
     
+    playAgain.onclick = function() {
+        // resetting everything
+        snake = [
+            {
+                x: 8*box ,
+                y: 8*box
+            }
+        ];
+        
+        //food
+        food = {
+            x: randomOnBoard(),
+            y: randomOnBoard()
+        }
+
+        direction = "";
+       
+        startGame();
+    }
 
 
 }    
+
 
 loadSnakeGame();

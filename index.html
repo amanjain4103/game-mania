@@ -13,7 +13,7 @@
 
         <nav class="navbar">
             <span id="hamburger"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1.2em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1536 1280"><path d="M1536 1088v128q0 26-19 45t-45 19H64q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19H64q-26 0-45-19T0 704V576q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19H64q-26 0-45-19T0 192V64q0-26 19-45T64 0h1408q26 0 45 19t19 45z" fill="black"/></svg></span>
-            <a href="#" id="logo">Game Mania</a>
+            <a onclick="return mountCardsView()" id="logo">Game Mania</a>
             <input type="text" id="username" placeholder="user">
             
             <ul id="nav-items">
@@ -22,7 +22,7 @@
                     <ul id="dropdown-menu">
                         <!-- temporary mounting unmounting -->
                         <li onclick="return unmountCardsView()"><span>Snake</span></li>
-                        <li onclick="return mountCardsView()">Flappy Bird</li>
+                        <li>Flappy Bird</li>
                         <li>memory match</li>
                         <li>space invadors</li>
                     </ul>
@@ -57,7 +57,7 @@
                 <div id="controls-container">
                     <div id="arrow-key-container">
                         <div id="arrow-key-separate-to-top">
-                            <button class="arrow-key-button" id="top"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="3em" height="3em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><g fill="#FF9800"><path fill-rule="evenodd" d="M8 3.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z"/><path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8 3.707L5.354 6.354a.5.5 0 1 1-.708-.708l3-3z"/></g><rect x="0" y="0" width="16" height="16" fill="rgba(0, 0, 0, 0)" /></svg></button>
+                            <button class="arrow-key-button" id="top" ><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="3em" height="3em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><g fill="#FF9800"><path fill-rule="evenodd" d="M8 3.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z"/><path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8 3.707L5.354 6.354a.5.5 0 1 1-.708-.708l3-3z"/></g><rect x="0" y="0" width="16" height="16" fill="rgba(0, 0, 0, 0)" /></svg></button>
                         </div>
                         <div id="arrow-key-separate-to-bottom">
                             <button class="arrow-key-button" id="left"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="3em" height="3em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><g fill="#FF9800"><path fill-rule="evenodd" d="M5.854 4.646a.5.5 0 0 1 0 .708L3.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0z"/><path fill-rule="evenodd" d="M2.5 8a.5.5 0 0 1 .5-.5h10.5a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/></g><rect x="0" y="0" width="16" height="16" fill="rgba(0, 0, 0, 0)" /></svg></button>
@@ -66,8 +66,8 @@
                         </div>
                     </div>
                     <div id="rest-container">
-                        <button class="btn-play-again">PLAY AGAIN</button>
-                        <p class="game-view-score">Highest Score: <span>20</span></p>
+                        <button class="btn-play-again" id="play-again">PLAY AGAIN</button>
+                        <p class="game-view-score">Score: <span id="showScore">0</span></p>
                     </div>
                 </div>
             </div>
@@ -78,7 +78,7 @@
         <!-- snake game  -->
         <!-- <canvas id="canvas"></canvas> -->
         <script src="./src/js/init.js"></script>
-        <script src="./src/js/script.js"></script>
         <script src="src/js/index.js"></script>
+        <script src="./src/js/script.js"></script>
     </body>
 </html>

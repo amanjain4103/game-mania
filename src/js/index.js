@@ -5,6 +5,7 @@ const navItems = document.getElementById("nav-items");
 const usernameField = document.getElementById("username");
 const viewOneContainer = document.getElementById("viewOneContainer");
 const viewTwoContainer = document.getElementById("viewTwoContainer");
+const showScore = document.getElementById("showScore");
 
 let isDropdownVisible = false;
 let isHamburgerClicked = false;
@@ -57,6 +58,10 @@ function mountCardsView() {
     
 }
 
+function incrementScore() {
+    ++score;
+    showScore.innerText = score;
+}
 
 
 
