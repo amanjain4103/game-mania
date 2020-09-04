@@ -1,5 +1,6 @@
 const dropdownSnakeOption = document.getElementById("dropdownSnakeOption");
 const dropdownMemoryMatchOption = document.getElementById("dropdownMemoryMatchOption");
+const dropdownFlappyBirdOption = document.getElementById("dropdownFlappyBirdOption");
 
 dropdownSnakeOption.onclick = function() {
     unmountCardsView();
@@ -11,4 +12,12 @@ dropdownMemoryMatchOption.onclick = function() {
     unmountCardsView();
     unmountCanvas();
     mountInplaceOfCanvas();
+}
+
+dropdownFlappyBirdOption.onclick = function() {
+    unmountCardsView();
+    unmountInplaceOfCanvas();
+    unmountSnakeGame();
+    mountCanvas();
+    loadFlappyBirdGame();
 }

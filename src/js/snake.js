@@ -1,3 +1,12 @@
+let interval=0;
+
+    function startGame() {
+        interval = window.setInterval(draw,100);
+    }
+    function stopGame() {
+        window.clearInterval(interval);
+    }
+
 function loadSnakeGame() {
     const top = document.getElementById("top");
     const right = document.getElementById("right");
@@ -223,15 +232,6 @@ function loadSnakeGame() {
     
     }
     
-    let interval=0;
-
-    function startGame() {
-        interval = window.setInterval(draw,100);
-    }
-    function stopGame() {
-        window.clearInterval(interval);
-    }
-    
     startGame();
     
     playAgain.onclick = function() {
@@ -265,6 +265,7 @@ function mountSnakeGame() {
 }
 
 function unmountSnakeGame() {
+    stopGame()
     unmountCanvas();
 }
 
