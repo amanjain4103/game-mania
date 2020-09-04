@@ -1,5 +1,3 @@
-const playAgain = document.getElementById("play-again");
-
 function loadSnakeGame() {
     const top = document.getElementById("top");
     const right = document.getElementById("right");
