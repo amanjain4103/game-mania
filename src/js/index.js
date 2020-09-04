@@ -63,14 +63,9 @@ function incrementScore() {
     showScore.innerText = score;
 }
 
-
-
-
-
-
-
-
-
+function resetScore() {
+    showScore.innerText = 0;
+}
 
 //solving bug - if we continuously resize window the display of nav elements becomess none forever
 

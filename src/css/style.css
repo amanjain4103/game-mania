@@ -240,7 +240,36 @@ body {
     font-size: 1.5rem;
 }
 
+#inplaceOfCanvas {
+    /* display: none; */
+    background-color: #2F3640;
+    width: 510px;
+    height: 510px;
+    display: flex;
+    flex-wrap: wrap;
+}
 
+.memory-card {
+    background-color: #a4a4a4;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+}
+
+.memory-card:hover {
+    
+    width: 148px;
+    height: 148px;
+    box-shadow: 0 0 20px 1px #FF9800;
+    border: 1px dashed #FF9800;
+    cursor: pointer;
+}
+
+.memory-card-img {
+    display: none;
+    width: 148px;
+    height: 148px;
+}
 
 @media only screen and (max-width: 775px) {
    #username {
@@ -314,5 +343,29 @@ body {
         display: flex;
     }
 
+    #inplaceOfCanvas {
+        width: 272px;
+        height: 272px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .memory-card {
+        background-color: #a4a4a4;
+        width: 80px;
+        height: 80px;
+        margin: 5px;
+    }
+
+    .memory-card:hover {
+    
+        width: 78px;
+        height: 78px;
+    }
+    
+    .memory-card-img {
+        width: 78px;
+        height: 78px;
+    }
 }
 

@@ -1,7 +1,6 @@
 const playAgain = document.getElementById("play-again");
 
 function loadSnakeGame() {
-    
     const top = document.getElementById("top");
     const right = document.getElementById("right");
     const bottom = document.getElementById("bottom");
@@ -136,7 +135,6 @@ function loadSnakeGame() {
         
         if(event.keyCode === 37 && direction !=="RIGHT" ) {
             direction = "LEFT";
-            console.log(direction)
         }else if(event.keyCode === 38 && direction !=="DOWN") {
             direction = "UP";
         }else if(event.keyCode === 39 && direction !=="LEFT") {
@@ -228,11 +226,9 @@ function loadSnakeGame() {
     }
     
     let interval=0;
-    // let pos=0;
 
     function startGame() {
         interval = window.setInterval(draw,100);
-        // console.log(interval[pos]);
     }
     function stopGame() {
         window.clearInterval(interval);
@@ -242,6 +238,8 @@ function loadSnakeGame() {
     
     playAgain.onclick = function() {
         // resetting everything
+        resetScore();
+
         snake = [
             {
                 x: 8*box ,
@@ -263,5 +261,12 @@ function loadSnakeGame() {
 
 }    
 
+function mountSnakeGame() {
+    mountCanvas();
+    loadSnakeGame();
+}
 
-loadSnakeGame();
+function unmountSnakeGame() {
+    unmountCanvas();
+}
+
