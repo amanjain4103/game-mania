@@ -58,16 +58,16 @@ function loadFlappyBirdGame() {
         canvas.style.backgroundColor = "#48dbfb";
 
         var pipeNorth = new Image();
-        pipeNorth.src = "/src/assets/pipeNorth.png";
+        pipeNorth.src = "./src/assets/pipeNorth.png";
         ctx.drawImage(pipeNorth,pipeNorthPos.x*box,pipeNorthPos.y,pipeNorthPos.w*box,pipeNorthPos.h*box)
 
         var pipeSouth = new Image();
-        pipeSouth.src = "/src/assets/pipeSouth.png";
+        pipeSouth.src = "./src/assets/pipeSouth.png";
         ctx.drawImage(pipeSouth,pipeSouthPos.x*box,pipeSouthPos.y*box,pipeSouthPos.w*box,pipeSouthPos.h*box)
 
 
         var bird = new Image();
-        bird.src = "/src/assets/bird.png";
+        bird.src = "./src/assets/bird.png";
         ctx.drawImage(bird,birdPos.x*box,birdPos.y*box,birdPos.w*box,birdPos.h*box);
 
             
