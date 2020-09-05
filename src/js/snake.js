@@ -1,25 +1,15 @@
-const playAgain = document.getElementById("play-again");
+let tempGlobalStartGame = function() {};
+let tempGlobalStopGame = function() {};
+
+
 
 function loadSnakeGame() {
-    const top = document.getElementById("top");
+    
+    const top = document.getElementById("top");   //giving unidentifiable error when using let and const
     const right = document.getElementById("right");
     const bottom = document.getElementById("bottom");
     const left = document.getElementById("left");
 
-    
-    // const canvas = document.getElementById("canvas");
-    
-    // //making canvas responsive
-    // //17*30
-    // canvas.width = 510;
-    // canvas.height = 510;
-    
-    // if(window.innerWidth <= 600 ) {
-    //     //17*16
-    //     canvas.width = 272;
-    //     canvas.height = 272;
-    // }
-    
     //setting smallest unit 
     let box = canvas.width/17; //since both height and width are always same
     
@@ -126,37 +116,46 @@ function loadSnakeGame() {
         return false;
     }
     
-    //listening to arrow keys
-    document.addEventListener("keydown",detectDirection);
     
+
     let direction = "";
     
-    function detectDirection(event) {
+    //putting in function so that they can be recalled whenever required
+    function handleControls() {
+
+        //listening to arrow keys
+        document.addEventListener("keydown",detectDirection);
         
-        if(event.keyCode === 37 && direction !=="RIGHT" ) {
-            direction = "LEFT";
-        }else if(event.keyCode === 38 && direction !=="DOWN") {
-            direction = "UP";
-        }else if(event.keyCode === 39 && direction !=="LEFT") {
-            direction = "RIGHT";
-        }else if(event.keyCode === 40 && direction !=="UP") {
-            direction = "DOWN";
+        function detectDirection(event) {
+            
+            if(event.keyCode === 37 && direction !=="RIGHT" ) {
+                direction = "LEFT";
+            }else if(event.keyCode === 38 && direction !=="DOWN") {
+                direction = "UP";
+            }else if(event.keyCode === 39 && direction !=="LEFT") {
+                direction = "RIGHT";
+            }else if(event.keyCode === 40 && direction !=="UP") {
+                direction = "DOWN";
+            }
         }
+        
+        //triggered when on screen control buttons are pressed
+        left.onclick = function() {
+            detectDirection({keyCode:37})
+        }
+        top.onclick = function() {
+            detectDirection({keyCode:38})
+        }
+        right.onclick = function() {
+            detectDirection({keyCode:39})
+        }
+        bottom.onclick = function() {
+            detectDirection({keyCode:40})
+        }
+
     }
-    
-    //triggered when on screen control buttons are pressed
-    left.onclick = function() {
-        detectDirection({keyCode:37})
-    }
-    top.onclick = function() {
-        detectDirection({keyCode:38})
-    }
-    right.onclick = function() {
-        detectDirection({keyCode:39})
-    }
-    bottom.onclick = function() {
-        detectDirection({keyCode:40})
-    }
+
+    handleControls();
 
     paintSnakeBoard();
     
@@ -224,17 +223,24 @@ function loadSnakeGame() {
         }
     
     }
-    
-    let interval=0;
 
+    let interval=null;
     function startGame() {
-        interval = window.setInterval(draw,100);
+        if(interval == null) {
+            interval = window.setInterval(draw,100);
+        }
+        handleControls();
+
     }
     function stopGame() {
         window.clearInterval(interval);
+        interval = null;
     }
     
-    startGame();
+    tempGlobalStartGame = startGame;
+    tempGlobalStopGame = stopGame;
+
+    tempGlobalStartGame();
     
     playAgain.onclick = function() {
         // resetting everything
@@ -259,14 +265,17 @@ function loadSnakeGame() {
     }
 
 
+
 }    
 
 function mountSnakeGame() {
+    unmountSnakeGame();
     mountCanvas();
     loadSnakeGame();
 }
 
 function unmountSnakeGame() {
+    tempGlobalStopGame();
     unmountCanvas();
 }
 

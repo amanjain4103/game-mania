@@ -20,11 +20,10 @@
                 <li id="dropdown-trigger">
                     <a href="#" >Games <span id="dropdown-icon" ><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1.01em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 616 614"><path d="M602.442 200l-253 317c-24 29-61 29-84 0l-253-317c-24-30-12-53 25-53h540c38 0 49 23 25 53z" fill="#626262"/><rect x="0" y="0" width="616" height="614" fill="rgba(0, 0, 0, 0)" /></svg></span></a>
                     <ul id="dropdown-menu">
-                        <!-- temporary mounting unmounting -->
                         <li id="dropdownSnakeOption"><span>Snake</span></li>
-                        <li>Flappy Bird</li>
+                        <li id="dropdownFlappyBirdOption">Flappy Bird</li>
                         <li id="dropdownMemoryMatchOption" >memory match</li>
-                        <li>space invadors</li>
+                        <li id="dropdownSpaceInvadorsOption">space invadors</li>
                     </ul>
                 </li>
                 <li><a href="#">Games Played : <span>5</span></a></li>
@@ -36,16 +35,16 @@
             <div id="viewOneContainer">
                 <!-- game cards here -->
                 <div class="card">
-                    <button class="btn" >Play Now!!!</button>
+                    <button class="btn" id="cardSnakeOption">Play Now!!!</button>
                 </div>
                 <div class="card">
-                    <button class="btn" >Play Now!!!</button>
+                    <button class="btn" id="cardFlappyBirdOption">Play Now!!!</button>
                 </div>
                 <div class="card">
-                    <button class="btn" >Play Now!!!</button>
+                    <button class="btn" id="cardMemoryMatchOption">Play Now!!!</button>
                 </div>
                 <div class="card">
-                    <button class="btn" >Play Now!!!</button>
+                    <button class="btn" id="cardSpaceInvadorsOption">Play Now!!!</button>
                 </div>
             </div>
 
@@ -89,7 +88,9 @@
         <script src="./src/js/init.js"></script>
         <script src="src/js/index.js"></script>
         <script src="./src/js/snake.js"></script>
+        <script src="./src/js/flappyBird.js"></script>
         <script src="./src/js/memoryMatch.js"></script>
+        <script src="./src/js/spaceInvadors.js"></script>
         
         <script src="./src/js/game.js"></script>
     </body>

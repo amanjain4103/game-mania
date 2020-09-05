@@ -1,6 +1,8 @@
 let score = 0;
 const canvas = document.getElementById("canvas");
 const inplaceOfCanvas = document.getElementById("inplaceOfCanvas");
+const playAgain = document.getElementById("play-again");
+
 
 function mountCanvas() {
     //making canvas responsive

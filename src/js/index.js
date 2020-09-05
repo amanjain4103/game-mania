@@ -32,6 +32,7 @@ hamburger.onclick = function() {
     isHamburgerClicked = !isHamburgerClicked;
 }
 
+
 // initially isCardViewMounted = true;
 
 function unmountCardsView() {
@@ -64,6 +65,7 @@ function incrementScore() {
 }
 
 function resetScore() {
+    score=0;
     showScore.innerText = 0;
 }
 
