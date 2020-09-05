@@ -134,11 +134,48 @@ body {
     height: 300px;
     width: 230px;
     margin: 15px;
-    background: url(../assets/snake-game.jpg) no-repeat center center scroll; 
+    background: url(../assets/snake-and-food-game-banner.png) no-repeat center center scroll; 
     background-size: cover;
     border: 2px dashed grey;
     transition-duration: 0.4s;
 }
+
+#viewOneContainer > div:nth-child(2) {
+    flex-direction: row;
+    background-color: black;
+    height: 300px; 
+    width: 230px;
+    margin: 15px;
+    background: url(../assets/flappy-bird-banner.png) no-repeat center center scroll; 
+    background-size: cover;
+    border: 2px dashed grey;
+    transition-duration: 0.4s;
+}
+
+#viewOneContainer > div:nth-child(3) {
+    flex-direction: row;
+    background-color: black;
+    height: 300px;
+    width: 230px;
+    margin: 15px;
+    background: url(../assets/memory-match-game-banner.png) no-repeat center center scroll; 
+    background-size: cover;
+    border: 2px dashed grey;
+    transition-duration: 0.4s;    
+}
+
+#viewOneContainer > div:nth-child(4) {
+    flex-direction: row;
+    background-color: black;
+    height: 300px;
+    width: 230px;
+    margin: 15px;
+    background: url(../assets/space-invadors-banner.png) no-repeat center center scroll; 
+    background-size: cover;
+    border: 2px dashed grey;
+    transition-duration: 0.4s;    
+}
+
 
 .card:hover {
     box-shadow: 0 0 25px 2px #FF9800;
@@ -269,6 +306,14 @@ body {
     display: none;
     width: 148px;
     height: 148px;
+}
+
+/* styling footer */
+
+footer {
+    text-align: center;
+    color: #130f40;
+    font-weight: 800;
 }
 
 @media only screen and (max-width: 775px) {

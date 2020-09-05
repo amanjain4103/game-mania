@@ -58,6 +58,7 @@ function cardClicked(cardNum) {
         if(firstSrc == openedImgs[openedCardNums[1]].src && firstSrc == openedImgs[openedCardNums[2]].src) {
             //that's great I don't need to do much just keep those imgs open
             ++numOfImgStacksIdentified; //since all three matches means that one stack is identified
+            incrementScore();
             //need to clear this explicitly again since timeout is async 
             if(numOfImgStacksIdentified === 3) {
                 alert("you win!!! Click Play Again button to play it once more.")
@@ -82,6 +83,7 @@ function cardClicked(cardNum) {
 playAgain.onclick = function() {
     wantToPlayAgain = true;
     numOfImgStacksIdentified = 0;
+    resetScore();
     assignRandomImagesToCards();
 
 }

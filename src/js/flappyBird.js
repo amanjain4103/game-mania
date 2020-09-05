@@ -1,4 +1,5 @@
-
+let tempGlobalStartFlappyGame = function() {};
+let tempGlobalStopFlappyGame = function() {};
 
 function loadFlappyBirdGame() {
         
@@ -54,39 +55,47 @@ function loadFlappyBirdGame() {
     function draw() {
         ctx.clearRect(0,0,(box*17),(box*17));
 
-        canvas.style.backgroundColor = "grey";
+        canvas.style.backgroundColor = "#48dbfb";
 
         var pipeNorth = new Image();
         pipeNorth.src = "/src/assets/pipeNorth.png";
-        // pipeNorth.onload = function() {
-            ctx.drawImage(pipeNorth,pipeNorthPos.x*box,pipeNorthPos.y,pipeNorthPos.w*box,pipeNorthPos.h*box)
-        // }
+        ctx.drawImage(pipeNorth,pipeNorthPos.x*box,pipeNorthPos.y,pipeNorthPos.w*box,pipeNorthPos.h*box)
 
         var pipeSouth = new Image();
         pipeSouth.src = "/src/assets/pipeSouth.png";
-        // pipeSouth.onload = function() {
-            ctx.drawImage(pipeSouth,pipeSouthPos.x*box,pipeSouthPos.y*box,pipeSouthPos.w*box,pipeSouthPos.h*box)
-        // }
+        ctx.drawImage(pipeSouth,pipeSouthPos.x*box,pipeSouthPos.y*box,pipeSouthPos.w*box,pipeSouthPos.h*box)
+
 
         var bird = new Image();
         bird.src = "/src/assets/bird.png";
-        // bird.onload = function() {
-            ctx.drawImage(bird,birdPos.x*box,birdPos.y*box,birdPos.w*box,birdPos.h*box);
-        // }
-        
+        ctx.drawImage(bird,birdPos.x*box,birdPos.y*box,birdPos.w*box,birdPos.h*box);
+
+            
+        // game over rules 
+        if(birdPos.y >= 17 || birdPos.y <=0 ) {
+            stopFlappyGame();
+        }    
+        if(birdPos.x >= pipeNorthPos.x && birdPos.x <=pipeNorthPos.x+1) {
+            if(birdPos.y <= pipeNorthPos.h-1 || birdPos.y >= pipeSouthPos.y-0.5) {
+                stopFlappyGame();
+            }
+        }
+
+
         if(direction === "DOWN" ) {
             birdPos.y += 0.5;
         }
         if(direction === "UP") {
-            birdPos.y -=2;
+            birdPos.y -=1;
         }
         
-        // game over rules 
-        if(birdPos.y >= 17 || birdPos.y <=0 ) {
-            stopFlappyGame();
-        }
+        
         
 
+        //incrementing score
+        if(birdPos.x == pipeNorthPos.x+2) {
+            incrementScore();
+        }
 
 
         if(pipeNorthPos.x <=0) {
@@ -95,7 +104,6 @@ function loadFlappyBirdGame() {
             pipeNorthPos.h = genrateRandomNumberBetween(3,11);
             pipeSouthPos.y = pipeNorthPos.h + 3;
             pipeSouthPos.h = 17 - pipeSouthPos.y;
-
         }
 
 
@@ -104,17 +112,58 @@ function loadFlappyBirdGame() {
 
         direction = "DOWN";
     }
-
     
+    let flappyInterval = null;
+    function startFlappyGame() {
+        if(flappyInterval == null) {
+            flappyInterval = window.setInterval(draw,150);
+        }
+            
+    }
+
+    function stopFlappyGame() {
+        window.clearInterval(flappyInterval);
+        flappyInterval = null;
+    }
+    
+    tempGlobalStartFlappyGame = startFlappyGame;
+    tempGlobalStopFlappyGame = stopFlappyGame;
 
     startFlappyGame();
+
+    playAgain.onclick = function() {
+        // resetting the flappy bird game board
+        birdPos = {
+            x:3,
+            y:8,
+            w:1,
+            h:1
+        }
+        pipeNorthPos = {
+            x:12,
+            y:0,
+            w:2,
+            h:7
+        }
+        pipeSouthPos = {
+            x:12,
+            y:10,
+            w:2,
+            h:7
+        }
+        startFlappyGame();
+        resetScore();
+    }
 }
 
-let flappyInterval = 0;
-function startFlappyGame() {
-    flappyInterval = window.setInterval(draw,150);
+function mountFlappyBirdGame() {
+    unmountFlappyBirdGame();
+    mountCanvas();
+    loadFlappyBirdGame();   
 }
 
-function stopFlappyGame() {
-    window.clearInterval(flappyInterval);
+function unmountFlappyBirdGame() {
+    unmountCanvas();
+    tempGlobalStopFlappyGame();   
 }
+
