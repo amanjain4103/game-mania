@@ -1,5 +1,5 @@
 
-// let imgSrcArr = ["/src/assets/groot.jpg","/src/assets/ironman.jpg","/src/assets/minion.jpg"]
+// let imgSrcArr = ["./src/assets/groot.jpg","./src/assets/ironman.jpg","./src/assets/minion.jpg"]
 let openedCards = 0;
 let openedImgs = [];
 let openedCardNums = [];
@@ -8,7 +8,7 @@ let wantToPlayAgain = false;
 
 function assignRandomImagesToCards() {
 
-    let tempImgSrcArr = ["/src/assets/groot.jpg","/src/assets/groot.jpg","/src/assets/groot.jpg","/src/assets/minion.jpg","/src/assets/minion.jpg","/src/assets/minion.jpg","/src/assets/ironman.jpg","/src/assets/ironman.jpg","/src/assets/ironman.jpg"];
+    let tempImgSrcArr = ["./src/assets/groot.jpg","./src/assets/groot.jpg","./src/assets/groot.jpg","./src/assets/minion.jpg","./src/assets/minion.jpg","./src/assets/minion.jpg","./src/assets/ironman.jpg","./src/assets/ironman.jpg","./src/assets/ironman.jpg"];
 
     let tempImgSrcArrLength = 9;
 
