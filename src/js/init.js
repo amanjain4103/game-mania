@@ -25,6 +25,15 @@ function unmountCanvas() {
 
 function mountInplaceOfCanvas() {
     inplaceOfCanvas.style.display = "flex";
+    // have to do it here also because this is also assumed that mountInplaceOfCanvas will be going to mount memory match game also
+    document.getElementById("play-again").onclick = function() {
+        wantToPlayAgain = true;
+        numOfImgStacksIdentified = 0;
+        assignRandomImagesToCards();
+        incrementGamesPlayed();
+        resetScore();
+    
+    }
 }
 
 function unmountInplaceOfCanvas() {

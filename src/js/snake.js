@@ -261,6 +261,7 @@ function loadSnakeGame() {
 
         direction = "";
        
+        incrementGamesPlayed();
         startGame();
     }
 

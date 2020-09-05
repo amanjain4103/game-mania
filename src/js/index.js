@@ -6,10 +6,12 @@ const usernameField = document.getElementById("username");
 const viewOneContainer = document.getElementById("viewOneContainer");
 const viewTwoContainer = document.getElementById("viewTwoContainer");
 const showScore = document.getElementById("showScore");
+const gamePlayed = document.getElementById("game-played");
 
 let isDropdownVisible = false;
 let isHamburgerClicked = false;
 let isCardViewMounted = true;
+let numOfGamesPlayed = 0;
 
 dropdownTrigger.onclick = function() {
 
@@ -67,6 +69,13 @@ function incrementScore() {
 function resetScore() {
     score=0;
     showScore.innerText = 0;
+}
+
+
+// managing number of games played 
+function incrementGamesPlayed() {
+    ++numOfGamesPlayed;
+    gamePlayed.innerText = numOfGamesPlayed;
 }
 
 //solving bug - if we continuously resize window the display of nav elements becomess none forever

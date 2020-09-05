@@ -468,6 +468,7 @@ function loadSpaceInvadorsGame() {
         moveX = 4;
         yForGameOver = 0;
 
+        incrementGamesPlayed();
         stopSpaceInvadorsGame();
         resetScore();
         paintSpaceship();
