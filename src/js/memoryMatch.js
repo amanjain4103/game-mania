@@ -80,10 +80,11 @@ function cardClicked(cardNum) {
     
 }
 
-playAgain.onclick = function() {
+document.getElementById("play-again").onclick = function() {
     wantToPlayAgain = true;
     numOfImgStacksIdentified = 0;
-    resetScore();
     assignRandomImagesToCards();
+    incrementGamesPlayed();
+    resetScore();
 
 }

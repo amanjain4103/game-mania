@@ -15,6 +15,7 @@ dropdownSnakeOption.onclick = function() {
     unmountSpaceInvadorsGame();
     unmountFlappyBirdGame();
     mountSnakeGame();
+    incrementGamesPlayed();
 }
 
 dropdownMemoryMatchOption.onclick = function() {
@@ -23,6 +24,7 @@ dropdownMemoryMatchOption.onclick = function() {
     unmountSpaceInvadorsGame();
     unmountFlappyBirdGame();
     mountInplaceOfCanvas();
+    incrementGamesPlayed();
 }
 
 dropdownFlappyBirdOption.onclick = function() {
@@ -31,6 +33,7 @@ dropdownFlappyBirdOption.onclick = function() {
     unmountSnakeGame();
     unmountSpaceInvadorsGame();
     mountFlappyBirdGame();
+    incrementGamesPlayed();
 }
 
 dropdownSpaceInvadorsOption.onclick = function() {
@@ -39,6 +42,7 @@ dropdownSpaceInvadorsOption.onclick = function() {
     unmountSnakeGame();
     unmountFlappyBirdGame();
     mountSpaceInvadorsGame();
+    incrementGamesPlayed();
 }
 
 cardSnakeOption.onclick = function() {
@@ -47,6 +51,7 @@ cardSnakeOption.onclick = function() {
     unmountSpaceInvadorsGame();
     unmountFlappyBirdGame();
     mountSnakeGame();
+    incrementGamesPlayed();
 }
 
 
@@ -56,6 +61,7 @@ cardMemoryMatchOption.onclick = function() {
     unmountSpaceInvadorsGame();
     unmountFlappyBirdGame();
     mountInplaceOfCanvas();
+    incrementGamesPlayed();
 }
 
 
@@ -65,6 +71,7 @@ cardFlappyBirdOption.onclick = function() {
     unmountSnakeGame();
     unmountSpaceInvadorsGame();
     mountFlappyBirdGame();
+    incrementGamesPlayed();
 }
 
 
@@ -74,6 +81,7 @@ cardSpaceInvadorsOption.onclick = function() {
     unmountSnakeGame();
     unmountFlappyBirdGame();
     mountSpaceInvadorsGame();
+    incrementGamesPlayed();
 }
 
 

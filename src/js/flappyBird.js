@@ -151,6 +151,7 @@ function loadFlappyBirdGame() {
             w:2,
             h:7
         }
+        incrementGamesPlayed();
         startFlappyGame();
         resetScore();
     }
