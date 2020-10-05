@@ -7,9 +7,9 @@ For me Games are love and Development is passion so I thought why not wear the s
 
 ### Live Preview ( [here](https://amanjain4103.github.io/game-mania/) )
 
-![Landing Page](https://drive.google.com/file/d/1oef3IhRRpBNvPFU4Br1_NwKABmbkKzZ2/view?usp=sharing)
-![falppy bird](https://drive.google.com/file/d/1ST1yJY4BZqjJAX3A2oJ2kbggpLc9b6tG/view?usp=sharing)
-![mobile view and snake game](https://drive.google.com/file/d/1vVK0VBRUTENVB3PURiez_axI1-LuJR3K/view?usp=sharing)
+![Landing Page](./screenshots/game-mania-landing-page.JPG)
+![falppy bird](./screenshots/game-mania-flappy-bird.JPG)
+![mobile view and snake game](./screenshots/game-mania-snake-game.PNG)
 
 ### Special Features That stand out
 * Pure Html/Css/Javascript used
