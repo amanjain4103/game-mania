@@ -1,4 +1,4 @@
-# game-mania
+# Game-Mania
                                                                          
 #### What's the Motive? And what is it? 
 For me Games are love and Development is passion so I thought why not wear the shoes of game developer once and at the same time improve my web development skills, and this is what happened after 4 days. I made the whole website responsive so that I can play the games even when I am travelling and just used html/css/javascript to achieve the same. This project made me super confident about my fundamentals 😎
@@ -8,14 +8,21 @@ For me Games are love and Development is passion so I thought why not wear the s
 ### Live Preview ( [here](https://amanjain4103.github.io/game-mania/) )
 
 ![Landing Page](./screenshots/game-mania-landing-page.JPG)                              
-
-##                                                                                              
+<br />
+<br />
+<br />
 
 ![falppy bird](./screenshots/game-mania-flappy-bird.JPG)
-##                                                                                                                          
+<br />
+<br />
+<br />
+                                                                                                                          
                                                                                                        
 ![mobile view and snake game](./screenshots/game-mania-snake-game.PNG)
-##                                                                                                                           
+<br />
+<br />
+<br />
+                                                                                                                           
                                                                                                        
 
 ### Special Features That stand out
