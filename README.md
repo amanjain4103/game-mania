@@ -8,13 +8,14 @@ For me Games are love and Development is passion so I thought why not wear the s
 ### Live Preview ( [here](https://amanjain4103.github.io/game-mania/) )
 
 ![Landing Page](./screenshots/game-mania-landing-page.JPG)                              
-                                                                                                                          
-                                                                                                       
+
+##                                                                                              
+
 ![falppy bird](./screenshots/game-mania-flappy-bird.JPG)
-                                                                                                                          
+##                                                                                                                          
                                                                                                        
 ![mobile view and snake game](./screenshots/game-mania-snake-game.PNG)
-                                                                                                                          
+##                                                                                                                           
                                                                                                        
 
 ### Special Features That stand out
